@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 const dimensionSchema = new Schema(
     {
         nombre: { type: String, required: true },
-        planetas : [{by: mongoose.Schema.Types.ObjectId, ref:"Planetas"}]
+        planetas : [{type: mongoose.Schema.Types.ObjectId, ref:"Planetas"}]
     }
 )
 

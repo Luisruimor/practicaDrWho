@@ -4,11 +4,11 @@ const Schema = mongoose.Schema;
 
 const tardisSchema = new Schema(
     {
-        dimensiones : [{by: mongoose.Schema.Types.ObjectId, ref:"Dimensiones"}],
-        planetas : [{by: mongoose.Schema.Types.ObjectId, ref:"Planetas"}],
-        personas : [{by: mongoose.Schema.Types.ObjectId, ref:"Personas"}],
+        dimensiones : [{type: mongoose.Schema.Types.ObjectId, ref:"Dimensiones"}],
+        planetas : [{type: mongoose.Schema.Types.ObjectId, ref:"Planetas"}],
+        personas : [{type: mongoose.Schema.Types.ObjectId, ref:"Personas"}],
         camuflaje: {type: String, required:true},
-        anho: {type: Number, required:true}
+        año: {type: Number, required:true}
     }
 )
 
