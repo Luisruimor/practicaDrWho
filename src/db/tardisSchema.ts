@@ -4,7 +4,6 @@ const Schema = mongoose.Schema;
 
 const tardisSchema = new Schema(
     {
-        name: {type: String, required:true},
         dimensiones : [{type: mongoose.Schema.Types.ObjectId, ref:"Dimension"}],
         camuflaje: {type: String, required:true},
         año: {type: Number, required:true}

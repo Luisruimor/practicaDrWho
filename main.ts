@@ -1,6 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import "dotenv";
+import { mostrarTardis } from "./src/resolvers/getTardis.ts";
 
 const MONGO_URL = Deno.env.get("MONGO_URL");
 
@@ -13,6 +14,7 @@ app
     .get("/api", (req:Request, res:Response) => {
         res.send("Bienvenido a la API-Tardis");
     })
+    .get("/api/tardis", mostrarTardis)
 
 app.listen(3000, () => {
     console.log("Server listening on port 3000");
