@@ -5,10 +5,10 @@ const Schema = mongoose.Schema;
 const planetaSchema = new Schema(
     {
         nombre: { type: String, required: true },
-        personas : [{type: mongoose.Schema.Types.ObjectId, ref:"Personas"}]
+        personas : [{type: Schema.Types.ObjectId, ref:"Persona"}]
     }
 )
 
 export type PlanetaModelType = mongoose.Document;
 
-export const PlanetaModel = mongoose.model<PlanetaModelType>("Planetas", planetaSchema);
+export const PlanetaModel = mongoose.model<PlanetaModelType>("Planeta", planetaSchema);

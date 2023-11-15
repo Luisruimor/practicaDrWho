@@ -11,4 +11,4 @@ const personaSchema = new Schema(
 
 export type PersonaModelType = mongoose.Document;
 
-export const PersonaModel = mongoose.model<PersonaModelType>("Personas", personaSchema);
+export const PersonaModel = mongoose.model<PersonaModelType>("Persona", personaSchema);
