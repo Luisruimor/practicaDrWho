@@ -1,10 +1,9 @@
 import express from "express";
 import mongoose from "mongoose";
-import "dotenv";
+
 import { mostrarTardis } from "./src/resolvers/getTardis.ts";
 
 const MONGO_URL = Deno.env.get("MONGO_URL");
-
 await mongoose.connect(MONGO_URL) && console.log("Conectado a la base de datos")
 
 const app = express();
