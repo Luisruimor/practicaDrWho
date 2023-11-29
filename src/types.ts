@@ -1,4 +1,5 @@
 type Tardis = {
+    id:string,
     dimensiones : Dimension[],
     planetas: Planeta[],
     personas: Persona[],
@@ -7,16 +8,19 @@ type Tardis = {
 }
 
 type Dimension = {
+    id:string,
     nombre:string,
     planetas: Planeta[],
 }
 
 type Planeta = {
+    id:string,
     nombre:string,
     personas: Persona[],
 }
 
 type Persona = {
+    id:string,
     nombre:string,
     sexo:boolean
 }
