@@ -13,7 +13,7 @@ export const borrarTardis = async (req:Request, res:Response) => {
         encontrado.planetasID.forEach(async (plan) => await PlanetaModel.findByIdAndDelete(plan));
         encontrado.personasID.forEach(async (pers) => await PersonaModel.findByIdAndDelete(pers));
 
-        await .findByIdAndDelete(id);
+        await TardisModel.findByIdAndDelete(id);
 
         res.status(200).send("Tardis borrada correctamente");
     } catch (e) {
