@@ -6,6 +6,8 @@ import {PersonaModel} from "../db/personaSchema.ts";
 export const borrarTardis = async (req:Request, res:Response) => {
     const id = req.params.id;
     try{
+        if (!id) throw new Error("No se ha introducido un ID");
+        
         const encontrado = await TardisModel.findById(id);
         if (!encontrado) res.status(404).send("No se ha encontrado la Tardis");
 
