@@ -14,17 +14,11 @@ app.use(express.json());
 
 app
     .get("", (req:Request, res:Response) => {
-        res.send("Bienvenido a la API-Tardis");
+        res.status(200).send("Bienvenido a la API-Tardis");
     })
     .get("/api", mostrarTardis)
     .get("/api/:id", mostrarTardisById)
     .get("/api/:id/download",descargarTardisById)
-    //.get("/dimensiones", mostrarDimensiones)  //mostrar todas las dimensiones de todas las Tardis. Se mostrará la tardis de la que provienen
-    //.get("/dimensiones/:id", mostrarDimensionesById)  //mostrar dimensiones, de una Tardis
-    //.get("/planetas", mostrarPlanetas)  //mostrar todos los planetas de todas las Tardis. Se mostrará la tardis de la que provienen
-    //.get("/planetas/:id", mostrarPlanetasById)  //mostrar planetas, de una Tardis
-    //.get("/personas", mostrarPersonas)  //mostrar todas las personas de todas las Tardis. Se mostrará la tardis de la que provienen
-    //.get("/personas/:id", mostrarPersonasById)  //mostrar personas, de una Tardis
     .post("/api",añadirTardis)
     .put("/api/:id", modificarTardis)
     .delete("/api/:id", borrarTardis)
