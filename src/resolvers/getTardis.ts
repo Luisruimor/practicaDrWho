@@ -4,7 +4,7 @@ import {Request, Response} from "express";
 export const mostrarTardisById = async (req:Request, res:Response) => {
     const id = req.params.id;
     try {
-        if (id) throw new Error("No se ha introducido un ID")
+        if (!id) throw new Error("No se ha introducido un ID")
         const encontrado = await TardisModel.findById(id)
             .populate({
                 path: 'dimensionesID',
